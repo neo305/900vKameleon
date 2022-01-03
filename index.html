@@ -1,0 +1,392 @@
+<html>
+<head>
+<title>Kameleon PS4 900FW Jailbreak V4.3 lazmod</title>
+<style>
+body{background-image: url("bg.jpg");
+color:white;font-size:20px;text-align:center;margin:0;overflow:hidden;}
+.info{overflow: hidden;position: fixed;position: absolute;top: 45%;left: 50%;font-size: 25px;font-family: sans-serif;color: #b8b8b8;transform: translate(-50%, -50%);}
+.button{background-color: transparent;color: black;height: 5%;width: 13,7%;cursor: pointer;font-size: medium;} button:hover {box-shadow: 0 5px 50px 0 #0947f0;color: #40FF00;margin-bottom: 5px;}
+</style>
+
+<script>
+if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+function awaitpl() {
+  msgs.innerHTML= LoadedMSG;
+ }
+function ghdone() {
+  msgs.innerHTML= LoadedMSG;
+}
+
+function toogle_payload(){
+var req = new XMLHttpRequest();
+req.responseType = "arraybuffer";
+req.open("GET",PLfile,true);
+req.send();
+req.onreadystatechange=function(){
+if (req.readyState == 4){ //Improvement.
+  ghPL = req.response;
+  setTimeout(poc, 1500);
+  }
+};
+}
+</script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+<body>
+  <h1 id=msgs style='font-size:25px;text-align:center;color:white'>Kameleon PS4 900FW Jailbreak V4.3 lazmod</h1>
+  
+  <div id=mymenu style="text-align:center">
+    <div text-align= center>Pass = <span id=passCounter style="color:#40FF00"></span>&nbsp;&nbsp;:&nbsp;&nbsp;Fail = <span id=failCounter style="color:#ff0011"></span></div>
+    <div style="width:100%;font-size:20px;color:white">
+    PS4 Firmware <span id="PS4fw"></span></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><div style=font-size:16px>GOLDHEN / BIN LOADER</div>
+    <button class="button" onMouseOver="msgs.innerHTML='GoldHen v2.0b - By SiSTRo'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_goldhen(); return false">GoldHen V2.0B</button>
+    <button class="button" onMouseOver="msgs.innerHTML='GoldHen v2.0b2 - By SiSTRo'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_goldhenb2(); return false">GoldHen V2.0B2</button>
+    <button class="button" onMouseOver="msgs.innerHTML='Receives .Bin payloads on port 9020 via NetCat'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_binloader(); return false">Binloader-9020</button>
+    <a href="payload.html#p0=mira.js"><button class="button"  onMouseOver="msgs.innerHTML='Receives .Bin payloads on port 9021 via NetCat aka Sleirsgoevy Mira Loader'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" type="button">Binloader-9021</button></a>
+    <br><br>
+    <div style=font-size:16px>PAYLOADS SECTION 1</div>
+    <button class="button" onMouseOver="msgs.innerHTML='Orbis Tool Box v1190 - By OSM'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_orbistoolbox(); return false">Orbis-Tool-Box</button>
+    <button class="button" onMouseOver="msgs.innerHTML='App Dumper Only v1.8 - Original Version By xVortex / 9.00 Port Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_dumper(); return false">App-Dumper</button>
+    <button class="button" onMouseOver="msgs.innerHTML='Disable-Updates v1.0 - By Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_disableupdates(); return false">Disable-Updates</button>
+    <button class="button" onMouseOver="msgs.innerHTML='Enable-Updates v1.0 - By Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_enableupdates(); return false">Enable-Updates</button>
+    <button class="button" onMouseOver="msgs.innerHTML='Ftp v1.3 - Original Version By xVortex / 9.00 Port By Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_ftp(); return false">Ftp</button>
+    <button class="button" onMouseOver="msgs.innerHTML='Kernel-Dumper - v1.0 Original Version By Eversion / 9.00 Port By Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_kerneldumper(); return false">Kernel-Dumper</button>
+    <br><br>
+    <div style=font-size:16px>PAYLOADS SECTION 2</div>
+    <button class="button" onMouseOver="msgs.innerHTML='PSN Account Offline Web Activator - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_webactivator(); return false">Web-Offline-Activator</button>
+    <button class="button" onMouseOver="msgs.innerHTML='Ps4Debug v1.1.14 - By CTN123'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_ps4debug(); return false">Ps4Debug</button>
+    <button class="button" onMouseOver="msgs.innerHTML='DB-Backup v1.0 - By Leeful / 9.00 Port By Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_backup(); return false">DB-Backup</button>
+    <button class="button" onMouseOver="msgs.innerHTML='DB-Restore v1.0 - By Leeful / 9.00 Port Al Azif'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_restore(); return false">DB-Restore</button>
+    <button class="button" onMouseOver="msgs.innerHTML='To-Dex v1.0 - By notzecoxao'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_todex(); return false">To-Dex</button>
+    <button class="button" onMouseOver="msgs.innerHTML='WebRTE v1.0 - By PS4 Trainer'"; onmouseout="msgs.innerHTML='Kameleon PS4 900FW Jailbreak V4.3'" onclick="load_webrte(); return false">WebRTE</button>
+    <br><br>
+    <div style=font-size:18px>Use The PS Button To Exit The Menu.</div>
+    </div>
+    <script>
+    var UA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple')).replace("layStation 4/","");
+    if (UA == "9.00"){PS4fw.innerHTML="v"+UA+" Detected"};if(UA != "9.00"){PS4fw.innerHTML="Spoofed To v"+UA};
+    </script>
+    <script>
+    if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount=0;
+     if (localStorage.passCounter == null || localStorage.passCounter == undefined ){
+      passCounter.innerHTML=localStorage.passcount;}
+    if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount=0;
+     if (localStorage.failCounter == null || localStorage.failCounter == undefined ){
+      failCounter.innerHTML=localStorage.failcount;}
+</script>
+    </script>
+
+<script>
+var exec_type = "";
+
+function load_goldhen(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading GoldHen V2.0B. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="GoldHen V2.0B Loaded";
+PLfile = "pl_goldhen20b.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_goldhenb2(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading GoldHen V2.0B2. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="GoldHen V2.0B2 Loaded";
+PLfile = "pl_goldhen20b2.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_binloader(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Bin Loader on Port 9020. Please wait 20-30 seconds!!!";
+LoadedMSG="Awaiting For Payload on Port 9020...";
+exec_type = "binloader";
+setTimeout(poc, 1500);
+}
+
+function load_webactivator(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading PSN Account Offline Web Activator. Please wait 20-30 seconds!!!</h1>";
+var link = document.createElement('a');
+document.body.appendChild(link);
+link.href = '900.html';
+link.click();
+}
+
+function load_orbistoolbox(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Orbis Tool Box v1190. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Orbis Tool Box v1190 Loaded";
+PLfile = "pl_OrbisToolbox.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_disableupdates(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Disable-Updates. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Disable-Updates Loaded";
+PLfile = "pl_disableupdates.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_enableupdates(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Enable-Updates. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Enable-Updates Loaded";
+PLfile = "pl_enableupdates.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_backup(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB-Backup. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="DB-Backup Loaded";
+PLfile = "pl_backup.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_app2usb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading App-To-Usb. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="App-To-Usb Loaded";
+PLfile = "pl_app2usb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_dumper(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading App Dumper. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="App Dumper Loaded";
+PLfile = "pl_appdumper.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_exitidu(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Exitidu. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Exitidu Loaded";
+PLfile = "pl_exitidu.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_rifrenamer(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Rifrenamer. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Rifrenamer Loaded";
+PLfile = "pl_rifrenamer.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_enablebrowser(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Enable-Browser. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Enable-Browser Loaded";
+PLfile = "pl_enablebrowser.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_ftp(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Ftp. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Ftp Loaded";
+PLfile = "pl_ftp.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_gtava127(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading ArabicGuy 1.27. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="ArabicGuy 1.27 Loaded";
+PLfile = "pl_gtava127.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_gtava132(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading ArabicGuy 1.32. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="ArabicGuy 1.32 Loaded";
+PLfile = "pl_gtava132.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_gtava133(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading ArabicGuy 1.33. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="ArabicGuy 1.33 Loaded";
+PLfile = "pl_gtava133.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_gtavbeefqueef133(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading BeefQueefMod 1.33. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="BeefQueefMod 1.33 Loaded";
+PLfile = "pl_BeefQueefMod133.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_gtavbeefqueef134(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading BeefQueefMod 1.34. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="BeefQueefMod 1.34 Loaded";
+PLfile = "pl_BeefQueefMod134.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_gtavbeefqueef138(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading BeefQueefMod 1.38. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="BeefQueefMod 1.38 Loaded";
+PLfile = "pl_BeefQueefMod138.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_rdr2_100(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Read Dead Redemption II Mod v1.00. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Read Dead Redemption II Mod v1.00 Loaded";
+PLfile = "pl_rdr2100.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_rdr2_113(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Read Dead Redemption II Mod v1.13. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Read Dead Redemption II Mod v1.13 Loaded";
+PLfile = "pl_rdr2113.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_rdr2_119(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Read Dead Redemption II Mod v1.19. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Read Dead Redemption II Mod v1.19 Loaded";
+PLfile = "pl_rdr2119.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_rdr2_124(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Read Dead Redemption II Mod v1.24. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Read Dead Redemption II Mod v1.24 Loaded";
+PLfile = "pl_rdr2124.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_historyblocker(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading History-Blocker. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="History-Blocker Loaded";
+PLfile = "pl_historyblocker.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_kerneldumper(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Kernel-Dumper. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Kernel-Dumper Loaded";
+PLfile = "pl_kerneldumper.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_moduledumper(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Kernel Module-Dumper. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Kernel Module-Dumper Loaded";
+PLfile = "pl_moduledumper.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_uart(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Permanent UART. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Permanent UART Loaded";
+PLfile = "pl_permanentuart.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_Linux1gb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux 1gb. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Linux 1gb Loaded";
+PLfile = "pl_LinuxLoader.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_Linux2gb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux 2gb. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Linux 2gb Loaded";
+PLfile = "pl_Linux2gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_Linux3gb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux 3gb. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Linux 3gb Loaded";
+PLfile = "pl_Linux3gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_Linux4gb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux 4gb. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Linux 4gb Loaded";
+PLfile = "pl_Linux4gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_Linux5gb(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Linux 5gb. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Linux 5gb Loaded";
+PLfile = "pl_Linux5gb.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_ps4debug(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading CTN Ps4Debug v1.1.14. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="CTN Ps4Debug v1.1.14 Loaded";
+PLfile = "pl_ps4debug.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_restore(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading DB-Restore. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="DB-Restore Loaded";
+PLfile = "pl_restore.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_todex(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Enable-Dex. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="ToDex Loaded";
+PLfile = "pl_todex.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_webrte(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading WebRTE. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="WebRTE Loaded";
+PLfile = "pl_webrte.bin";
+exec_type = "payload";
+toogle_payload();
+}
+
+function load_disableaslr(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading Disable-ASLR. Please wait 20-30 seconds!!!</h1>";
+LoadedMSG="Disable-ASLR Loaded";
+PLfile = "pl_disableaslr.bin";
+exec_type = "payload";
+toogle_payload();
+}
+</script>
+    
+</body>
+</html>

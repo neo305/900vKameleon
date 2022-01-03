@@ -1,0 +1,87 @@
+<html>
+    <style>
+        body{background-image: url("bg.jpg");
+        color:white;font-size:20px;text-align:center;margin:0;overflow:hidden;}
+    </style>
+<body>
+    <h1 id=msgs style='font-size:25px;text-align:center;color:white'>Loading... Please Wait 20-30 Seconds!!!</h1>
+    <div text-align= center>Pass = <span id=passCounter></span>&nbsp;&nbsp;:&nbsp;&nbsp;Fail = <span id=failCounter></span></div>
+    <div style="width:100%;font-size:20px;color:white">
+    PS4 Firmware <span id="PS4fw"></span></div>
+<script>
+function wk_keep_alive()
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', document.location.href, false);
+    xhr.send('');
+}
+
+function print(){}
+
+function getHashParams()
+{
+    var ans = {};
+    var p = document.location.hash.substr(1).split("&");
+    for(var i = 0; i < p.length; i++)
+    {
+        var kv = p[i].split('=');
+        var k = kv.shift();
+        ans[k] = decodeURIComponent(kv.join('='));
+    }
+    return ans;
+}
+
+function done()
+{
+    history.pushState({}, '', 'index.html');
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("You're all set!");
+        setTimeout(function() { read_ptr_at(0); }, 1);
+    }
+    else
+        alert("Jailbreak is not activated.");
+}
+
+function runScript(what)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', what, false);
+    xhr.send('');
+    eval.call(window, xhr.responseText);
+}
+
+var params = getHashParams();
+</script>
+<script>
+    if (localStorage.passcount == null || localStorage.passcount == undefined) localStorage.passcount=0;
+     if (localStorage.passCounter == null || localStorage.passCounter == undefined ){
+      passCounter.innerHTML=localStorage.passcount;}
+    if (localStorage.failcount == null || localStorage.failcount == undefined) localStorage.failcount=0;
+     if (localStorage.failCounter == null || localStorage.failCounter == undefined ){
+      failCounter.innerHTML=localStorage.failcount;}
+</script>
+<script>
+    var UA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple')).replace("layStation 4/","");
+    if (UA == "9.00"){PS4fw.innerHTML="v"+UA+" Detected"};if(UA != "9.00"){PS4fw.innerHTML="Spoofed To v"+UA};
+</script>
+<script src="netcat.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="exploit.js"></script>
+<script src="malloc.js"></script>
+<script src="rop_sleirs.js"></script>
+<script src="syscalls.js"></script>
+<script src="syscalls2.js"></script>
+<script>
+if('p0' in params)
+    runScript(params.p0);
+if('p1' in params)
+    runScript(params.p1);
+</script>
+<script src="kexploit-launcher.js"></script>
+<script src="relocator.js"></script>
+<script>done();</script>
+</body>
+</html>
